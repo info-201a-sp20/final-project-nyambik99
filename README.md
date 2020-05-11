@@ -1,20 +1,20 @@
 # Final Project
 Use this `REAMDE.md` file to describe your final project (as detailed on Canvas).
 
-##Why are you interested in this field/domain?
+#Why are you interested in this field/domain?
 #- We are all sleep-deprived college students that are curious about what factors go into a better sleep schedule. We hope that the data we find from these data sets will enable us to understand how we can all develop better sleep schedules.
 ##What other examples of data-driven projects have you found related to this domain (share at least 3)?
 #- Fitbit Experiment
 #- Sleepless in America
 #- Sleep Study
 #What data-driven questions do you hope to answer about this domain (share at least 3)?
-- Does screen time affect the quality of your sleep?
-- What physiological factors go into sleep deprivation?
-- What mental factors go into sleep deprivation?
-- What is the average amount of sleep needed?
-- What age groups need the most and least amount of sleep?
-- Does exercise affect sleep quality?
-- What age group sleeps the most?
+#- Does screen time affect the quality of your sleep?
+#- What physiological factors go into sleep deprivation?
+#- What mental factors go into sleep deprivation?
+#- What is the average amount of sleep needed?
+#- What age groups need the most and least amount of sleep?
+#- Does exercise affect sleep quality?
+#- What age group sleeps the most?
 
 #Fitbit Experiment
 #Where did you download the data (e.g., a web URL)?
