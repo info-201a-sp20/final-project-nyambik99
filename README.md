@@ -1,12 +1,13 @@
 # Final Project
 Use this `REAMDE.md` file to describe your final project (as detailed on Canvas).
-Why are you interested in this field/domain?
+
+#Why are you interested in this field/domain?
 - We are all sleep-deprived college students that are curious about what factors go into a better sleep schedule. We hope that the data we find from these data sets will enable us to understand how we can all develop better sleep schedules.
-What other examples of data-driven projects have you found related to this domain (share at least 3)?
+#What other examples of data-driven projects have you found related to this domain (share at least 3)?
 - Fitbit Experiment
 - Sleepless in America
 - Sleep Study
-What data-driven questions do you hope to answer about this domain (share at least 3)?
+#What data-driven questions do you hope to answer about this domain (share at least 3)?
 - Does screen time affect the quality of your sleep?
 - What physiological factors go into sleep deprivation?
 - What mental factors go into sleep deprivation?
@@ -15,16 +16,16 @@ What data-driven questions do you hope to answer about this domain (share at lea
 - Does exercise affect sleep quality?
 - What age group sleeps the most?
 
-Fitbit Experiment
-Where did you download the data (e.g., a web URL)?
+#Fitbit Experiment
+#Where did you download the data (e.g., a web URL)?
 - https://data.world/kmpearson/experiment
-How was the data collected or generated? Make sure to explain who collected the data (not necessarily the same people that host the data), and who or what the data is about?
+#How was the data collected or generated? Make sure to explain who collected the data (not necessarily the same people that host the data), and who or what the data is about?
 - Kim Pearson had individuals collect these data using Fitbit, and it tracks basic information such as hours of sleep, exercise .. and so forth.  
-How many observations (rows) are in your data?
+#How many observations (rows) are in your data?
 - 56 rows
-How many features (columns) are in the data?
+#How many features (columns) are in the data?
 - 16 columns
-What questions (from above) can be answered using the data in this dataset?
+#What questions (from above) can be answered using the data in this dataset?
 - What physiological factors go into sleep deprivation
 - Does exercise affect sleep quality?
 - What age group sleeps the most?
