@@ -28,18 +28,6 @@ sleep_women <- dataset %>%
   summarize(avg_sleep = mean(Avg.hrs.per.day.sleeping)) %>%
   pull(avg_sleep)
 
-difference_gender <- function(men, women) {
-  if (men > women) {
-    return("Yes, men get more sleep than women")
-  } else if (women > men) {
-    return("Yes, women get more sleep than men")
-  } else {
-    return("No, both gender get equal sleep")
-  }
-}
-
-result <- difference(sleep_men, sleep_women)
-
 ## Which year had the highest average amount of sleep per day for all
 ## days observation
 highest_avg_year <- dataset %>%

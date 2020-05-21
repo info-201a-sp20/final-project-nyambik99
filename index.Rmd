@@ -1,1 +1,87 @@
+---
+author: "Cynthia Yeh, Sofyar Utomo, Ryan Du, Sarah Takallou"
+title: "The time americans are sleeping"
+output: html_document
+---
 
+```{r setup, include=FALSE}
+library(knitr)
+setwd("./scripts/")
+source("summary_info_calc_sleepless.R")
+source("table_summary_sleepless.R")
+source("bar_chart_sleepless.R")
+source("pie_chart_sleepless.R")
+source("scatterplot_sleepless.R")
+```
+
+
+## Introductory paragraph:
+
+[data source](https://data.world/makeovermonday/2019w23) <br>
+
+We are all sleep-deprived college students that are curious about what factors go into a better sleep schedule. We hope that the data we find from these data sets will enable us to understand how we can all develop better sleep schedules. Our data set is about how much time Americans spend sleeping. This dataset allows us to see the relationship between the average amount of sleep for different age groups, genders, and on different days. 
+
+## Summary Paragraph:
+
+From the data, we can pull many different conclusions, as it has multiple variables that we can utilize.
+From the data, we had different age groups, including 15-24 years old, where we fall into. On average, our group has
+`r sleep_15_24` hours of sleep per day, compared to other age groups that had `r sleep_apart_15_24` average amount of sleep.
+Also, apparently, genders had different amounts of sleep too. Men had `r sleep_men` hours of sleep per day, while women had 
+`r sleep_women`. The type of days of the observation is also important. On average, holidays observation yields `r holiday_obv`
+while weekdays observation yields `r weekday_obv`.The dataset that we use also provides the year of observation. From this, we
+wanted to see whether the amount of sleep people get each day increases. The year with the lowest average of sleep is `r lowest_avg_year`
+and the highest is `r highest_avg_year`. 
+
+## Summary Table:
+
+This summary table displays information we collected from the data set such as the year, sex, average sleep, and type of days. <br>
+
+```{r, echo=FALSE}
+kable(data_table, col.names = c(
+  "Year", "Sex", "Age Group",
+  "Average Sleep (hrs)", "Type of Days")
+)
+```
+
+## Observations in the Table:
+
+This table used to have 8 columns, but we removed the other 3 columns (Period, standard error, activity) because it isn’t important to our dataset. That means we have 5 columns including sleep factors such as type of days, age group, and sex. There doesn’t seem to be a difference in sleep hours between sex. However, as the age group increase, sleep hours start to decrease
+
+## Bar Chart: 
+
+This bar chart was intended to show the relationship between the number of hours slept by Americans based on the type of day (all days, non holiday weekdays, weekends and holidays) <br>
+
+```{r, echo=FALSE}
+days <- time_americans_spend_sleeping$Type.of.Days
+hours <- time_americans_spend_sleeping$Avg.hrs.per.day.sleeping
+ggplot(data = time_americans_spend_sleeping,
+                    aes(x = days, y = hours)) +
+  geom_col() +
+  theme(axis.text.x = element_text(angle = 90)) +
+  labs(title = "Hours of Sleep Based on Types of Days")
+```
+
+The bar chart shows that non holiday weekdays had the lowest amount of hours slept and the weekend days and the holiday weekdays
+had the highest amount of hours slept.
+
+## Scatterplot:
+
+This scatterplot was intended to show the relationship between the year and hours slept by Americans. <br>
+
+```{r, echo=FALSE}
+scatterplot_chart
+```
+
+This scatter plot showed that the hours slept by Americans were fairly consistent from 2013 to 2017. There is a slight uphill trajectory as the years increase.
+
+## Purpose of Pie Chart:
+
+This chart was intended to show that the dataset and the result are accurate, as the amount of people being interviewed in each age group is relatively the same for all three types of days. <br>
+
+```{r, echo=FALSE}
+all_day_pie
+non_holiday_pie
+weekend_pie
+```
+
+The three pie charts have been grouped by different types of days. Within each chart, the distribution of each age group is relatively the same. Thus, we can conclude that our data is not flawed and is accurate. 
