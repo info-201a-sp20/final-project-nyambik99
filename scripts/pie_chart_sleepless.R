@@ -1,5 +1,4 @@
 # Pie Chart
-install.packages("ggplot2")
 library("dplyr")
 library("ggplot2")
 library("stringr")
@@ -13,17 +12,21 @@ datatable <- read.csv("Time_Americans_Spend_Sleeping.csv",
 View(datatable)
 
 
-all_days <- datatable %>% filter(Type.of.Days == "All days")
-ggplot(data = all_days, aes(x = Type.of.Days, fill = Age.Group)) +
+alldays <- datatable %>% filter(Type.of.Days == "All days")
+all_days <- ggplot(data = alldays, aes(x = Type.of.Days, fill = Age.Group)) +
   geom_bar(width = 1) +
   coord_polar(theta = "y")
+print(all_days)
 
 nonholidays <- datatable %>% filter(Type.of.Days == "Nonholiday weekdays")
-ggplot(data = nonholidays, aes(x = Type.of.Days, fill = Age.Group)) +
+non_holidays <- ggplot(data = nonholidays, aes(x = Type.of.Days,
+                                               fill = Age.Group)) +
   geom_bar(width = 1) +
   coord_polar(theta = "y")
+print(non_holidays)
 
 weekends <- datatable %>% filter(Type.of.Days == "Weekend days and holidays")
-ggplot(data = weekends, aes(x = Type.of.Days, fill = Age.Group)) +
+week_end <- ggplot(data = weekends, aes(x = Type.of.Days, fill = Age.Group)) +
   geom_bar(width = 1) +
   coord_polar(theta = "y")
+print(week_end)
