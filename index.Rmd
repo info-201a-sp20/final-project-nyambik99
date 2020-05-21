@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 author: "Cynthia Yeh, Sofyar Utomo, Ryan Du, Sarah Takallou"
 title: "The time americans are sleeping"
@@ -85,3 +86,5 @@ weekend_pie
 ```
 
 The three pie charts have been grouped by different types of days. Within each chart, the distribution of each age group is relatively the same. Thus, we can conclude that our data is not flawed and is accurate. 
+=======
+>>>>>>> 329e16085dc84590d997a3ba0d7972b7349c3bee
