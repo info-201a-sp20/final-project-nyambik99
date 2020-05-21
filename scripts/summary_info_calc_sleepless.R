@@ -49,6 +49,13 @@ highest_avg_year <- dataset %>%
   filter(avg_sleep == max(avg_sleep)) %>%
   pull(Year)
 
+lowest_avg_year <- dataset %>%
+  filter(Type.of.Days == "All days") %>%
+  group_by(Year) %>%
+  summarize(avg_sleep = mean(Avg.hrs.per.day.sleeping)) %>%
+  filter(avg_sleep == min(avg_sleep)) %>%
+  pull(Year)
+
 ## Which age group had the highest average amount of sleep
 highest_avg_age <- dataset %>%
   group_by(Age.Group) %>%
