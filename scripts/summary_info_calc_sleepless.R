@@ -2,7 +2,8 @@
 
 library(dplyr)
 
-dataset <- read.csv("Time_Americans_Spend_Sleeping.csv", stringsAsFactors = FALSE)
+dataset <- read.csv("Time_Americans_Spend_Sleeping.csv",
+                    stringsAsFactors = FALSE)
 View(dataset)
 
 ## Average amount of sleep of age group 15-24 compared to other age groups
@@ -27,7 +28,7 @@ sleep_women <- dataset %>%
   summarize(avg_sleep = mean(Avg.hrs.per.day.sleeping)) %>%
   pull(avg_sleep)
 
-difference_gender <- function(men, women){
+difference_gender <- function(men, women) {
   if (men > women) {
     return("Yes, men get more sleep than women")
   } else if (women > men) {
@@ -39,22 +40,31 @@ difference_gender <- function(men, women){
 
 result <- difference(sleep_men, sleep_women)
 
-## Which year had the highest average amount of sleep per day for all days observation
-highest_avg_year <- dataset %>% filter(Type.of.Days == "All days") %>%
-  group_by(Year) %>% summarize(avg_sleep = mean(Avg.hrs.per.day.sleeping)) %>%
-  filter(avg_sleep == max(avg_sleep)) %>% pull(Year)
+## Which year had the highest average amount of sleep per day for all
+## days observation
+highest_avg_year <- dataset %>%
+  filter(Type.of.Days == "All days") %>%
+  group_by(Year) %>%
+  summarize(avg_sleep = mean(Avg.hrs.per.day.sleeping)) %>%
+  filter(avg_sleep == max(avg_sleep)) %>%
+  pull(Year)
 
 ## Which age group had the highest average amount of sleep
-highest_avg_age <- dataset %>% group_by(Age.Group) %>%
+highest_avg_age <- dataset %>%
+  group_by(Age.Group) %>%
   summarize(avg_sleep = mean(Avg.hrs.per.day.sleeping)) %>%
-  filter(avg_sleep == max(avg_sleep)) %>% pull(Age.Group)
+  filter(avg_sleep == max(avg_sleep)) %>%
+  pull(Age.Group)
 
-## Does weekdays observation yields more sleeping time than weekends observation?
-weekday_obv <- dataset %>% filter(Type.of.Days == "Nonholiday weekdays") %>%
+## Does weekdays observation yields more sleeping time compared to
+## weekends observation?
+weekday_obv <- dataset %>%
+  filter(Type.of.Days == "Nonholiday weekdays") %>%
   summarize(avg_sleep = mean(Avg.hrs.per.day.sleeping)) %>%
   pull(avg_sleep)
 
-holiday_obv <- dataset %>% filter(Type.of.Days == "Weekend days and holidays") %>%
+holiday_obv <- dataset %>%
+  filter(Type.of.Days == "Weekend days and holidays") %>%
   summarize(avg_sleep = mean(Avg.hrs.per.day.sleeping)) %>%
   pull(avg_sleep)
 
