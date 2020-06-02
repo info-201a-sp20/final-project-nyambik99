@@ -3,7 +3,7 @@
 library(ggplot2)
 library("shiny")
 library(readr)
-time_americans_sleep <- read_csv("~/final-project-nyambik99/scripts/Time_Americans_Spend_Sleeping.csv")
+time_americans_sleep <- read_csv("../final-project-nyambik99/scripts/Time_Americans_Spend_Sleeping.csv")
 
 
 # The purpose of this scatter plot is to explore the
