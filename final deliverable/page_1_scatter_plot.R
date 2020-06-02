@@ -18,6 +18,16 @@ select_values
 selected_values <- to_snake_case(select_values)
 selected_values
 
+list("Year" = "year",
+     "Period" = "period",
+     "Avg hrs per day sleeping" = "avg_hrs_per_day_sleeping",
+     "Type of Days" = "type_of_days",
+     "Age Group" = "age_group",
+     "Activity" = "activity",
+     "Sex" = "sex")
+
+
+
 x_input <- selectInput(
   "x_var",
   label = "X Variable",
