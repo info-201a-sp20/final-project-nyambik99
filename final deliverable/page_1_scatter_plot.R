@@ -15,18 +15,21 @@ time_americans_sleep <- read_csv("../final-project-nyambik99/scripts/Time_Americ
 select_values <- colnames(time_americans_sleep)
 select_values
 
+selected_values <- to_snake_case(select_values)
+selected_values
+
 x_input <- selectInput(
   "x_var",
   label = "X Variable",
-  choices = select_values,
-  selected = "Year"
+  choices = selected_values,
+  selected = "year"
 )
 
 
 y_input <- selectInput(
   "y_var",
   label = "Y Variable",
-  choices = select_values,
+  choices = selected_values,
   selected = "Sex"
 )
 
