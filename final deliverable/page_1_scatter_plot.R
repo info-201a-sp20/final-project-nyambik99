@@ -4,6 +4,10 @@ library(ggplot2)
 library("shiny")
 library(readr)
 time_americans_sleep <- read_csv("../final-project-nyambik99/scripts/Time_Americans_Spend_Sleeping.csv")
+<<<<<<< HEAD
+=======
+
+>>>>>>> 1010154869c580dffd9563f35798b1b30bc7450f
 
 # The purpose of this scatter plot is to explore the
 # coorelattions between different values in the data set.
