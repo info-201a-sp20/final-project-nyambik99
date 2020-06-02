@@ -3,8 +3,7 @@
 library(ggplot2)
 library("shiny")
 library(readr)
-time_americans_sleep <- read_csv("~/final-project-nyambik99/scripts/Time_Americans_Spend_Sleeping.csv")
-
+time_americans_sleep <- read_csv("../final-project-nyambik99/scripts/Time_Americans_Spend_Sleeping.csv")
 
 # The purpose of this scatter plot is to explore the
 # coorelattions between different values in the data set.
@@ -18,28 +17,30 @@ select_values
 selected_values <- to_snake_case(select_values)
 selected_values
 
-list("Year" = "year",
-     "Period" = "period",
-     "Avg hrs per day sleeping" = "avg_hrs_per_day_sleeping",
-     "Type of Days" = "type_of_days",
-     "Age Group" = "age_group",
-     "Activity" = "activity",
-     "Sex" = "sex")
-
-
 
 x_input <- selectInput(
   "x_var",
   label = "X Variable",
-  choices = select_values,
+  choices = list("Year" = 'Year',
+                 "Period" = 'Period',
+                 "Avg hrs per day sleeping" = "'Avg hrs per day sleeping'",
+                 "Type of Days" = "'Type of Days'",
+                 "Age Group" = "'Age Group'",
+                 "Activity" = "'Activity'",
+                 "Sex" = 'Sex'),
   selected = "year"
 )
-
 
 y_input <- selectInput(
   "y_var",
   label = "Y Variable",
-  choices = select_values,
+  choices = list("Year" = 'Year',
+                 "Period" = 'Period',
+                 "Avg hrs per day sleeping" = "'Avg hrs per day sleeping'",
+                 "Type of Days" = "'Type of Days'",
+                 "Age Group" = "'Age Group'",
+                 "Activity" = "'Activity'",
+                 "Sex" = 'Sex'),
   selected = "Sex"
 )
 
@@ -62,7 +63,6 @@ ui <- fluidPage(
   size_input,
   plotOutput("scatter")
 )
-
 
 # server.R
 library(dplyr)
