@@ -21,7 +21,7 @@ selected_values
 x_input <- selectInput(
   "x_var",
   label = "X Variable",
-  choices = selected_values,
+  choices = select_values,
   selected = "year"
 )
 
@@ -29,7 +29,7 @@ x_input <- selectInput(
 y_input <- selectInput(
   "y_var",
   label = "Y Variable",
-  choices = selected_values,
+  choices = select_values,
   selected = "Sex"
 )
 
