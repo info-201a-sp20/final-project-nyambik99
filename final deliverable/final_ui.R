@@ -37,9 +37,9 @@ ui <- navbarPage(
 
                     ### Plot the boxplot
                     mainPanel(
-                      h4("This plot shows the relationship between the types of days
-                         and hours slept in each age group"),
-                      plotlyOutput("plot1")
+                      plotlyOutput("plot1"),
+                      h4("This plot shows the relationship between the types
+                          of days and hours slept in each age group")
                     )
                   )
   ),
@@ -65,9 +65,9 @@ ui <- navbarPage(
 
                     ### Plot the boxplot
                     mainPanel(
+                      plotlyOutput("plot2"),
                       h4("This plot shows the relationship between the age group
-                         and hours slept in each sex"),
-                      plotlyOutput("plot2")
+                         and hours slept in each sex")
                     )
                   )
   ),
