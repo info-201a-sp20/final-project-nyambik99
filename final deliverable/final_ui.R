@@ -37,6 +37,8 @@ ui <- navbarPage(
 
                     ### Plot the boxplot
                     mainPanel(
+                      h4("This plot shows the relationship between the types of days
+                         and hours slept in each age group"),
                       plotlyOutput("plot1")
                     )
                   )
@@ -63,6 +65,8 @@ ui <- navbarPage(
 
                     ### Plot the boxplot
                     mainPanel(
+                      h4("This plot shows the relationship between the age group
+                         and hours slept in each sex"),
                       plotlyOutput("plot2")
                     )
                   )
@@ -84,7 +88,9 @@ ui <- navbarPage(
 
       ### Plots the scatterplot
       mainPanel(
-        plotlyOutput("scatter")
+        plotlyOutput("scatter"),
+        h4("The purpose of this scatterplot is to explore the
+           coorelations between different values in the data set.")
       )
     )
   ),
@@ -92,7 +98,7 @@ ui <- navbarPage(
   ### Conclusion page (HTML)
   conclusion <- tabPanel("Conclusion",
     mainPanel(
-      includeHTML("conclusion.html"),
+      includeHTML("conclusion.html")
     )
   )
 )
