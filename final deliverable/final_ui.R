@@ -1,22 +1,24 @@
-source('final_server.R')
+### UI
+
+source("final_server.R")
 
 ui <- navbarPage(
   "Americans Sleeping Analysis",
-  
-  ## Actually first page
+
+  ## Introduction page (HTML)
   introduction <- tabPanel("Introduction",
                     mainPanel(
-                      includeHTML('into_paragraph.html'),
+                      includeHTML("into_paragraph.html"),
                     )
   ),
-  
-  ## Page 1
+
+  ## First graph (Boxplot)
   page1 <- tabPanel("Age",
                   titlePanel("Average Sleeping Hours by Age Group"),
                   sidebarLayout(
                     sidebarPanel(
-                      
-                      ### Modify graph
+
+                      ### Widgets to modify the boxplot
                       radioButtons(
                         "Age",
                         label = "Choose an age group",
@@ -31,21 +33,21 @@ ui <- navbarPage(
                         )
                       )
                     ),
-                    
-                    ### Plot the graph
+
+                    ### Plot the boxplot
                     mainPanel(
                       plotlyOutput("plot1")
                     )
                   )
   ),
-  
-  ## Page 2
+
+  ## Second graph (another boxplot)
   page2 <- tabPanel("Sex",
                   titlePanel("Average Sleeping Hours by Sex"),
                   sidebarLayout(
                     sidebarPanel(
-                      
-                      ### Modify graph
+
+                      ### Widgets to modify the boxplot
                       radioButtons(
                         "Sex",
                         label = "Choose a sex",
@@ -56,36 +58,39 @@ ui <- navbarPage(
                         )
                       )
                     ),
-                    
-                    ### Plot the graph
+
+                    ### Plot the boxplot
                     mainPanel(
                       plotlyOutput("plot2")
                     )
                   )
   ),
-  
+
+  ### Third graph (Scatterplot)
   page3 <- tabPanel("Dataset Exploration",
     titlePanel("Time Americans Spend Sleeping Dataset Exploration"),
     sidebarLayout(
       sidebarPanel(
-        
+
+        ### Widgets to modify the scatterplot
         x_input,
         y_input,
         color_input,
         size_input
-        
+
       ),
-      
+
+      ### Plots the scatterplot
       mainPanel(
         plotlyOutput("scatter")
       )
     )
   ),
-  
+
+  ### Conclusion page (HTML)
   conclusion <- tabPanel("Conclusion",
     mainPanel(
-      includeHTML('conclusion.html'),
+      includeHTML("conclusion.html"),
     )
   )
 )
-
