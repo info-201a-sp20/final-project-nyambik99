@@ -30,7 +30,8 @@ ui <- navbarPage(
                           "45 to 54 years" = "45 to 54 years",
                           "55 to 64 years" = "55 to 64 years",
                           "65 years and over" = "65 years and over"
-                        )
+                        ),
+                        selected = "15 years and over"
                       )
                     ),
 
@@ -55,7 +56,8 @@ ui <- navbarPage(
                           "Both" = "Both",
                           "Men" = "Men",
                           "Women" = "Women"
-                        )
+                        ),
+                        selected = "Both"
                       )
                     ),
 
